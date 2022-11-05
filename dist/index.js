@@ -227,7 +227,7 @@ function SetTorrentData() {
         torrentObject["comment"] = comment;
     if (document.getElementById("torrent_creation_date").checked)
         torrentObject["creation date"] = (Date.now() / 1000) | 0;
-    torrentObject["created by"] = "kimbatt.github.io/torrent-creator";
+    torrentObject["created by"] = "ToonsHub";
     if (document.getElementById("torrent_is_private").checked)
         infoObject["private"] = 1;
     infoObject["name"] = torrentName;
