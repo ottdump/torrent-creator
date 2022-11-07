@@ -222,7 +222,7 @@ label
 
 <label style="font-size: 22px; margin-left: 30px;">
     Set creation date
-    <input id="torrent_creation_date" type="checkbox" style="transform:scale(2); background: white; margin-left: 20px;" checked
+    <input id="torrent_creation_date" type="checkbox" style="transform:scale(2); background: white; margin-left: 20px;"
         oninput="TorrentParamsChanged('creationdate')"></label>
 <br />
 
@@ -239,7 +239,18 @@ label
 
 <div style="position: relative;">
     <textarea id="torrent_trackers" class="input-fullwidth" style="height: 130px; margin-top: 20px; white-space: pre-wrap;"
-        placeholder="Trackers, separated by space or newline (optional)" oninput="TorrentParamsChanged('trackers')" onchange="FormatTextareLines(this, false)"></textarea>
+        placeholder="Trackers, separated by space or newline (optional)" oninput="TorrentParamsChanged('trackers')" onchange="FormatTextareLines(this, false)">
+http://anidex.moe:6969/announce
+http://nyaa.tracker.wf:7777/announce
+udp://tracker.opentrackr.org:1337/announce
+udp://tracker.coppersurfer.tk:6969/announce
+udp://tracker.zer0day.to:1337/announce
+udp://open.stealth.si:80/announce
+udp://tracker.leechers-paradise.org:6969/announce
+udp://tracker-udp.anirena.com:80/announce
+udp://ipv4.tracker.harry.lu:80/announce
+udp://exodus.desync.com:6969/announce
+</textarea>
     <button id="tracker_add_button" style="position: absolute; right: 35px; top: 30px; visibility: hidden; opacity: 0; transition: opacity 0.5s ease-in-out;"
         onclick="ShowTrackers(true)">
         Add some trackers
@@ -251,10 +262,10 @@ label
     onchange="FormatTextareLines(this)"></textarea>
 <br />
 <textarea type="text" id="torrent_comment" class="input-fullwidth" style="margin-top: 0px; overflow: hidden;"
-    placeholder="Comment (optional)" oninput="ResizeTextarea(this);TorrentParamsChanged('comment')"></textarea>
+    placeholder="Comment (optional)" oninput="ResizeTextarea(this);TorrentParamsChanged('comment')">Credits to ToonsHub.xyz</textarea>
 <br />
-<input type="text" id="torrent_source" class="input-fullwidth" style="margin-bottom: 20px;" placeholder="Source (optional)"
-    oninput="TorrentParamsChanged('source')">
+<input type="text" id="torrent_source" class="input-fullwidth" style="margin-bottom: 20px;" placeholder="Source (optional)" value="https://toonshub.xyz"
+ oninput="TorrentParamsChanged('source')">
 <br />
 
 <div id="error_text" style="display: none; font-size: 25px; color: #ff3d58; margin-left: 20px; margin-bottom: 20px;"></div>
